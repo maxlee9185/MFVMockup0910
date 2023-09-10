@@ -4,9 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".DayMood">
 
-
+    <TextView
+        android:id="@+id/today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2024년 1월 6일"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/currentMood"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/currentMood"
@@ -14,19 +24,30 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/today"
         app:layout_constraintBottom_toTopOf="@id/callListString"
+        android:background="@drawable/solid_border"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/currentMoodImage"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/currentMoodGraphImage"
             app:layout_constraintTop_toTopOf="@id/currentMood"
             app:layout_constraintBottom_toBottomOf="@id/currentMood"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="3dp"
             android:src="@drawable/circle_blue"/>
+
+        <ImageView
+            android:id="@+id/currentMoodGraphImage"
+            android:layout_width="240dp"
+            android:layout_height="200dp"
+            android:src="@drawable/moodGraph"
+            app:layout_constraintBottom_toBottomOf="@id/currentMood"
+            app:layout_constraintStart_toEndOf="@id/currentMoodImage"
+            app:layout_constraintTop_toTopOf="@id/currentMood" />
 
 
 
@@ -36,7 +57,7 @@
         android:id="@+id/callListString"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="오늘의 통화내역"
+        android:text="오늘의 기분"
         android:textSize="20sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/callList"
