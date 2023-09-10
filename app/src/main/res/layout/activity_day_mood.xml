@@ -27,6 +27,7 @@
         app:layout_constraintTop_toBottomOf="@id/today"
         app:layout_constraintBottom_toTopOf="@id/callListString"
         android:background="@drawable/solid_border"
+        android:layout_marginBottom="50dp"
         android:orientation="horizontal">
 
         <ImageView
@@ -44,9 +45,10 @@
             android:id="@+id/currentMoodGraphImage"
             android:layout_width="240dp"
             android:layout_height="200dp"
-            android:src="@drawable/moodGraph"
+            android:src="@drawable/mood_graph"
             app:layout_constraintBottom_toBottomOf="@id/currentMood"
             app:layout_constraintStart_toEndOf="@id/currentMoodImage"
+            android:layout_marginEnd="3dp"
             app:layout_constraintTop_toTopOf="@id/currentMood" />
 
 
@@ -93,11 +95,12 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="주지환"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/textCallTime"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@id/firstCall"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -106,6 +109,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="09:00"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/textCallDuration"
@@ -118,6 +122,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="1:26"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/moodImage"
@@ -166,11 +171,12 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="조아라"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/textCallTime2"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@id/secondCall"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -179,6 +185,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="15:40"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/textCallDuration2"
@@ -192,6 +199,7 @@
                 android:gravity="center"
                 android:text="59:26"
                 android:textSize="16sp"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/moodImage2"
                 app:layout_constraintStart_toEndOf="@id/textCallTime2"
@@ -238,11 +246,12 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="정지은"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/textCallTime3"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="@id/thirdCall"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -252,6 +261,7 @@
                 android:gravity="center"
                 android:text="18:15"
                 android:textSize="16sp"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/textCallDuration3"
                 app:layout_constraintStart_toEndOf="@id/textCallerName3"
@@ -264,6 +274,7 @@
                 android:gravity="center"
                 android:text="5:02"
                 android:textSize="16sp"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/moodImage3"
                 app:layout_constraintStart_toEndOf="@id/textCallTime3"
